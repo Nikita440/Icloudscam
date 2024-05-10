@@ -11,7 +11,7 @@ const MyComponent = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         
-        const res = await fetch("https://icloudscam-yihr-git-main-nikita440s-projects.vercel.app:3000/api", {
+        const res = await fetch("/api", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
