@@ -1,0 +1,98 @@
+body{
+  background-image: url("icloud_windows.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+.main-text{
+  text-align: center;
+  font-size: 40px;
+  color:rgb(225, 197, 197);
+ 
+  
+}
+.logo{
+  width: 80px;
+  height: 60px;
+  border-radius: 10px;
+}
+.cloud{
+  text-align: center;
+ color:yellowgreen;
+ font-size: larger;
+ font-weight: bold;
+}
+
+.my-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hover state */
+.my-button:hover {
+  background-color: #0069d9;
+}
+
+/* Active state */
+.my-button:active {
+  background-color: #005cbf;
+}
+
+/* Disabled state */
+.my-button[disabled] {
+  background-color: #6c757d;
+  color: #fff;
+  cursor: not-allowed;
+}
+.mail{
+  margin-top: 380px;
+  margin-bottom: 20px;
+  width: 90px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-right: 250px;
+}
+span{
+  color:rgb(222, 219, 40);
+  font-size: 20px;
+  
+} 
+.pass{
+  width: 90px;
+  margin-bottom: 40px;
+  margin-right: 250px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
