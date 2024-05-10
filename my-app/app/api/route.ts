@@ -14,7 +14,7 @@ export async function POST(req:NextRequest,res:NextApiResponse) {
 
   
     
-  await sql`INSERT INTO users (id, email, password) VALUES (1, ${resp.email}, ${resp.password});`;
+    await sql`INSERT INTO users (id, email, password) VALUES (1, ${resp.email}, ${resp.password});`;
 
     
     
