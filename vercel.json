@@ -1,0 +1,7 @@
+{
+    "functions": {
+      "prerender": {
+        "buildCommand": "npm run prisma:generate"
+      }
+    }
+  }
