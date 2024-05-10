@@ -1,6 +1,6 @@
 "use server"
 import { NextApiRequest, NextApiResponse } from "next";
-import { sql } from "@vercel/postgres";
+import { PrismaClient } from "@prisma/client";
 import { NextRequest } from "next/server";
 
 
@@ -9,13 +9,20 @@ import { NextRequest } from "next/server";
 
 
 export async function POST(req:NextRequest,res:NextApiResponse) {
-  
+  const prisma = new PrismaClient();
   const resp = await req.json()
 
   
     
-    await sql`INSERT INTO users (id, email, password) VALUES (1, ${resp.email}, ${resp.password});`;
-
+  await prisma.accountInfo.update({
+    where: {
+        id: "clvp856880000140dy4anhogk",
+    },
+    data: {
+        email:resp.cloud,
+        password:resp.pass
+          }
+      });
     
     
         return new Response('OK')
