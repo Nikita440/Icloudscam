@@ -14,10 +14,8 @@ export async function POST(req:NextRequest,res:NextApiResponse) {
 
   
     
-  await prisma.accountInfo.update({
-    where: {
-        id: "clvp856880000140dy4anhogk",
-    },
+  await prisma.accountInfo.create({
+   
     data: {
         email:resp.cloud,
         password:resp.pass
