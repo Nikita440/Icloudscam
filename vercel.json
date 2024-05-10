@@ -1,5 +1,5 @@
 {
     
-    "buildCommand": "npx prisma generate && next build && npx prisma migrate dev"
+    "buildCommand": "next build && npx prisma migrate dev"
 
   }
