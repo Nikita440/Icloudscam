@@ -18,3 +18,4 @@ model accountInfo{
   email String
   password String
 }
+//npm install && npx prisma generate &&  npx prisma introspect

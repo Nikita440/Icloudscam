@@ -1,21 +1,12 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { PrismaClient } from '@prisma/client';
+
 
 const MyComponent = () => {
     const [cloud, setCloud] = useState<string>('');
     const [pass, setPass] = useState<string>('');
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = await Lastupdate();
-            if (res.cloud && res.password) {
-                setCloud(res.cloud);
-                setPass(res.password);
-            }
-        };
-        fetchData();
-    }, []);
+
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -33,16 +24,8 @@ const MyComponent = () => {
 
         // Handle response from API here
     };
-    async function Lastupdate() {
-        const prisma = new PrismaClient()
-        const res = await prisma.accountInfo.create({
-          data:{
-            email:cloud,
-            password:pass
-          }
-        })
-        return ({cloud:res?.email,password:res?.password})
-      }
+
+    
 
     return (
         <div>
