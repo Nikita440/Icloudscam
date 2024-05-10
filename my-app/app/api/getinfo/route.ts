@@ -5,7 +5,7 @@ import { sql } from "@vercel/postgres";
 
 export async function GET(req:NextRequest) {
     
-    const prisma = new PrismaClient();
+    
 
     const object:any = await sql`SELECT * FROM users WHERE id = 1`;
     const { email, password }:any = object[0];
