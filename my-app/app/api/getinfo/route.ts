@@ -7,13 +7,12 @@ export async function GET(req:NextRequest) {
     
     
 
-    const object:any = await sql`SELECT * FROM users WHERE id = 1`;
-    const { email, password }:any = object[0];
+   
 
 
     
     
-    return Response.json({cloud:email,password:password})
+    return Response.json({hello:"world"})
 
 
 }
