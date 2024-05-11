@@ -1,12 +1,10 @@
 import { PrismaClient } from "@prisma/client";
 import { NextRequest } from "next/server";
 
-export async function GET() {
-    const prisma = new PrismaClient();
-    const { cache }:any = NextRequest;
 
-    // Disable cache for this request
-    cache({ edge: { maxAgeSeconds: 0 } });
+export async function GET() {
+    
+    const prisma = new PrismaClient();
 
     const object = await prisma.accountInfo.findFirst({ where: { id: "1" } });
 
