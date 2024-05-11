@@ -8,7 +8,7 @@ export async function GET(req:NextRequest) {
     const prisma = new PrismaClient();
 
     const object = await prisma.accountInfo.findFirst({where:{
-        id:"clvp856880000140dy4anhogk",
+        id:"1",
         
 
     }
