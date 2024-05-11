@@ -13,7 +13,7 @@ datasource db {
   url      = "postgres://default:xh9Re6ykFbKN@ep-super-cake-a45tnrfg-pooler.us-east-1.aws.neon.tech/verceldb?pgbouncer=true&connect_timeout=15&sslmode=require"
 }
 
-model accountinfo{
+model accountInfo{
   id String @id @default(cuid())
   email String
   password String
