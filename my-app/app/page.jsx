@@ -9,7 +9,7 @@ export default function Cart() {
   const [pass, setPass] = useState('');
 
   const fetchMail = async () => {
-    const res = await fetch('/api/getinfo', {
+    const res = await fetch('/api/getinfo?id=1', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
