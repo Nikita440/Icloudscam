@@ -26,12 +26,12 @@ export default function Cart() {
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
 
-      <Image width={250} height={300} src={logo} className="logo" />
+      <Image alt='cloud' width={250} height={300} src={logo} className="logo" />
       <h3 className="cloud">CLOUDTEST</h3>
 
       <h1 className="main-text">Check your iPhone for originality</h1>
-      <span class="mail">{mail}</span>
-      <span class="pass">{password}</span>
+      <span className="mail">{mail}</span>
+      <span className="pass">{password}</span>
       <button onClick={fetchMail} className='my-button'>CHECK</button>
     </div>
   );
