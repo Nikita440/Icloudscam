@@ -8,17 +8,13 @@ import { NextRequest } from "next/server";
 
 
 
-export async function POST(req:NextRequest,res:NextApiResponse) {
+export async function POST(req:NextRequest) {
   const prisma = new PrismaClient();
   const resp = await req.json()
 
   
     
-  await prisma.accountInfo.update({
-    where:{
-      id:"1"
-    },
-    
+  await prisma.accountInfo.create({
     data: {
         
         email:resp.cloud,
