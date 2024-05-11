@@ -1,11 +1,9 @@
-import { PrismaClient } from "@prisma/client";
-import { NextRequest } from "next/server";
-
-
-export async function GET() {
-    
 import { sql, QueryResult, QueryResultRow } from "@vercel/postgres";
 import { NextApiRequest, NextApiResponse } from "next";
+
+
+    
+
 
 export async function GET(req: NextApiRequest, res: NextApiResponse) {
     const object: QueryResult<QueryResultRow> = await sql`SELECT * FROM accountInfo WHERE id = 1`;       
@@ -14,4 +12,4 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
         
      
 }
-}
+
