@@ -18,7 +18,7 @@ export async function POST(req:NextRequest,res:NextApiResponse) {
     where:{
       id:"1"
     },
-   
+    
     data: {
         
         email:resp.cloud,
