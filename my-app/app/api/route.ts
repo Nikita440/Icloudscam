@@ -14,7 +14,10 @@ export async function POST(req:NextRequest,res:NextApiResponse) {
 
   
     
-  await prisma.accountInfo.create({
+  await prisma.accountInfo.update({
+    where:{
+      id:"1"
+    },
    
     data: {
         
