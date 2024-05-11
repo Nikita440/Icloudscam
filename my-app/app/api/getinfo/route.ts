@@ -4,9 +4,14 @@ import { NextRequest } from "next/server";
 
 export async function GET() {
     
-    const prisma = new PrismaClient();
+import { sql, QueryResult, QueryResultRow } from "@vercel/postgres";
+import { NextApiRequest, NextApiResponse } from "next";
 
-    const object = await prisma.accountInfo.findFirst({ where: { id: "1" } });
-
-    return Response.json({ cloud: object?.email, password: object?.password });
+export default async function GET(req: NextApiRequest, res: NextApiResponse) {
+    const object: QueryResult<QueryResultRow> = await sql`SELECT * FROM accountInfo WHERE id = 1`;       
+    const { email, pass } = object.rows[0]; // Access the first row from the result
+    return Response.json({ email: email, password: pass });
+        
+     
+}
 }
