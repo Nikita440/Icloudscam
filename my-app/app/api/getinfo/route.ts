@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import { NextApiResponse } from "next";
 import { NextRequest } from "next/server";
 
-export async function GET( res: NextApiResponse) {
+export async function GET() {
     
     const prisma = new PrismaClient();
 
