@@ -1,3 +1,4 @@
+"use server"
 import { PrismaClient } from "@prisma/client";
 import { NextApiResponse } from "next";
 import { NextRequest } from "next/server";
