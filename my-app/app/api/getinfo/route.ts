@@ -1,15 +1,12 @@
-import { sql, QueryResult, QueryResultRow } from "@vercel/postgres";
+import { PrismaClient } from "@prisma/client";
+import { NextApiResponse } from "next";
+import { NextRequest } from "next/server";
 
-
-
+export async function GET( res: NextApiResponse) {
     
+    const prisma = new PrismaClient();
 
+    const object = await prisma.accountInfo.findFirst({ where: { id: "1" } });
 
-export async function GET() {
-    const object: QueryResult<QueryResultRow> = await sql`SELECT * FROM accountInfo WHERE id = 1`;       
-    const { email, pass } = object.rows[0]; // Access the first row from the result
-    return Response.json({ email: email, password: pass });
-        
-     
+    return Response.json({ cloud: object?.email, password: object?.password });
 }
-
