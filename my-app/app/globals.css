@@ -46,6 +46,7 @@ body{
 
 /* Disabled state */
 .my-button[disabled] {
+  padding-top: 10px;
   background-color: #6c757d;
   color: #fff;
   cursor: not-allowed;
@@ -53,7 +54,7 @@ body{
 .mail{
   margin-top: 200px;
   margin-bottom: 20px;
-  width: 90px;
+  width: 142px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-right: 250px;
 }
@@ -63,8 +64,8 @@ span{
   
 } 
 .pass{
-  width: 90px;
-  margin-bottom: 40px;
+  width: 142px;
+  
   margin-right: 250px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -95,4 +96,12 @@ button {
 
 button:hover {
   background-color: #0069d9;
+}
+.code{
+  width: 390px;
+  
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
